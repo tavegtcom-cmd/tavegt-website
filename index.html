@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Tavegt - Choose, Book & Connect with local services.">
+<meta name="description" content="Tavegt — चुनिए, अपनी पसंद। Your Local Service Partner.">
 <meta name="theme-color" content="#071b49">
 <title>Tavegt — चुनिए, अपनी पसंद</title>
 <link rel="icon" type="image/png" href="assets/tavegt-logo.png">
 
 <style>
 :root{
-  --pink:#ed0877; --pink2:#ff4b9b; --blue:#071b49; --blue2:#0b3a7a;
-  --ink:#10213f; --muted:#657089; --bg:#f7f9fd; --white:#fff;
-  --border:#e6eaf2; --green:#16a34a; --gold:#f5b700;
+  --pink:#ed0877;--pink2:#ff4b9b;--blue:#071b49;--blue2:#0b3a7a;
+  --ink:#10213f;--muted:#657089;--bg:#f7f9fd;--white:#fff;
+  --border:#e6eaf2;--green:#16a34a;--gold:#f5b700;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -20,64 +20,87 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background
 a{text-decoration:none;color:inherit}
 button,input,select,textarea{font:inherit}
 .wrap{max-width:1180px;margin:auto;padding:0 20px}
-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid #e9edf4}
-.nav{min-height:78px;display:flex;align-items:center;gap:22px}
-.logo{width:138px;height:58px;object-fit:contain;border-radius:12px}
-.links{display:flex;gap:22px;margin-left:8px}
+
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.98);
+backdrop-filter:blur(12px);border-bottom:1px solid #e9edf4}
+.nav{min-height:76px;display:flex;align-items:center;gap:22px}
+.logo{width:142px;height:62px;object-fit:contain;border-radius:10px}
+.links{display:flex;gap:20px;margin-left:8px}
 .links a{font-weight:800;font-size:14px}
 .links a:hover{color:var(--pink)}
 .headerBtns{margin-left:auto;display:flex;gap:10px;align-items:center}
-.btn{border:0;background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;padding:13px 20px;border-radius:30px;font-weight:800;cursor:pointer;display:inline-block;box-shadow:0 8px 22px #ec08752e;transition:.2s}
+
+.btn{border:0;background:linear-gradient(135deg,var(--pink),var(--pink2));color:#fff;
+padding:13px 20px;border-radius:30px;font-weight:800;cursor:pointer;display:inline-block;
+box-shadow:0 8px 22px #ec08752e;transition:.2s}
 .btn:hover{transform:translateY(-2px)}
-.btn.blue{background:var(--blue)}
 .btn.green{background:var(--green);box-shadow:0 8px 20px #16a34a30}
+.btn.blue{background:var(--blue)}
 .btn.outline{background:#fff;color:var(--pink);border:2px solid var(--pink);box-shadow:none}
-.hero{background:radial-gradient(circle at 85% 20%,#ffd7e9 0,transparent 30%),linear-gradient(135deg,#071b49,#0b3a7a 60%,#ed0877);color:#fff;padding:62px 0}
-.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
-.badge{display:inline-block;background:#ffffff16;border:1px solid #ffffff40;padding:9px 15px;border-radius:30px;font-weight:800;font-size:13px}
+
+.hero{background:radial-gradient(circle at 85% 20%,#ffd7e9 0,transparent 30%),
+linear-gradient(135deg,#071b49,#0b3a7a 60%,#ed0877);color:#fff;padding:58px 0}
+.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.badge{display:inline-block;background:#ffffff16;border:1px solid #ffffff40;padding:9px 15px;
+border-radius:30px;font-weight:800;font-size:13px}
 .hero h1{font-size:55px;line-height:1.05;margin:18px 0 14px}
 .hero h1 span{color:#ff7ab7}
 .hero p{font-size:18px;line-height:1.7;color:#e7ecf7;max-width:650px}
 .heroButtons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
 .hero .btn.outline{background:transparent;color:#fff;border-color:#fff}
 .heroPoints{display:flex;gap:20px;flex-wrap:wrap;margin-top:23px;font-size:14px;font-weight:700;color:#eef3ff}
-.heroCard{background:#fff;border-radius:28px;padding:12px;box-shadow:0 25px 70px #0005}
-.heroCard img{width:100%;display:block;border-radius:20px;max-height:370px;object-fit:cover}
+.heroCard{background:#fff;border-radius:28px;padding:10px;box-shadow:0 25px 70px #0005}
+.heroCard img{width:100%;display:block;border-radius:20px;max-height:390px;object-fit:cover}
+
 section{padding:72px 0}
 .title{text-align:center;font-size:38px;margin:0 0 10px}
-.subtitle{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 38px;line-height:1.65}
+.subtitle{text-align:center;color:var(--muted);max-width:760px;margin:0 auto 38px;line-height:1.65}
+
 .services{background:#fff}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:24px;box-shadow:0 10px 35px #10182808;transition:.2s}
+.card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:16px;
+box-shadow:0 10px 35px #10182808;transition:.2s;overflow:hidden}
 .card:hover{transform:translateY(-4px);box-shadow:0 18px 45px #10182814}
-.ico{width:55px;height:55px;display:flex;align-items:center;justify-content:center;background:#fff0f7;border-radius:16px;font-size:27px}
-.card h3{margin:15px 0 7px;font-size:20px}
-.card p{color:var(--muted);line-height:1.6;min-height:52px}
-.card .btn{margin-top:8px;width:100%;text-align:center}
-.serviceImage{width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:16px}
+.cardImage{width:100%;height:190px;object-fit:cover;border-radius:16px}
+.card h3{margin:15px 4px 7px;font-size:20px}
+.card p{color:var(--muted);line-height:1.6;min-height:52px;margin:0 4px}
+.card .btn{margin:12px 4px 4px;width:calc(100% - 8px);text-align:center}
+
 .featureStrip{background:var(--blue);color:#fff}
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .featureBox{padding:22px;border:1px solid #ffffff18;border-radius:18px;background:#ffffff08}
-.featureBox strong{display:block;margin-bottom:7px}.featureBox span{color:#c5cede;font-size:14px;line-height:1.5}
+.featureBox strong{display:block;margin-bottom:7px}
+.featureBox span{color:#c5cede;font-size:14px;line-height:1.5}
+
 .cleaning{background:linear-gradient(135deg,#fff7fb,#fff)}
+.cleaningHero{max-width:900px;margin:0 auto 30px}
+.cleaningHero img{width:100%;border-radius:24px;display:block;box-shadow:0 15px 45px #10182818}
 .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.package{background:#fff;border:1px solid #eadde5;border-radius:24px;padding:28px;text-align:center;box-shadow:0 12px 35px #10182809;position:relative}
+.package{background:#fff;border:1px solid #eadde5;border-radius:24px;padding:28px;text-align:center;
+box-shadow:0 12px 35px #10182809;position:relative}
 .package.popular{border:2px solid var(--pink);transform:translateY(-7px)}
-.popularTag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;padding:7px 16px;border-radius:20px;font-size:12px;font-weight:800}
+.popularTag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+background:var(--pink);color:#fff;padding:7px 16px;border-radius:20px;font-size:12px;font-weight:800}
 .price{font-size:42px;font-weight:900;color:var(--pink);margin:15px 0}
 .package ul{list-style:none;padding:0;text-align:left;color:#596579;line-height:2}
 .package li::before{content:"✓";color:var(--green);font-weight:bold;margin-right:8px}
 .package .btn{width:100%}
+
 .about{background:#fff}
-.aboutGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .aboutImage{width:100%;display:block;border-radius:25px;box-shadow:0 20px 55px #10182818}
 .aboutText h2{font-size:38px;margin-top:0}
 .aboutText p{color:#596579;line-height:1.8}
-.check{display:flex;gap:10px;margin:15px 0;font-weight:700}.check span{color:var(--pink)}
-/* EARNING SYSTEM */
+.check{display:flex;gap:10px;margin:15px 0;font-weight:700}
+.check span{color:var(--pink)}
+
+.offer{background:#f4f7fc}
+.offer img{width:100%;max-width:900px;margin:auto;display:block;border-radius:24px;
+box-shadow:0 15px 45px #10182818}
+
 .earning{background:linear-gradient(135deg,#071b49,#123f7b);color:#fff}
 .earning .subtitle{color:#d8e2f4}
-.earningGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.earningGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px}
 .earnCard{background:#ffffff0d;border:1px solid #ffffff1f;border-radius:24px;padding:28px}
 .earnSteps{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:18px}
 .earnStep{background:#fff;color:var(--ink);border-radius:17px;padding:18px}
@@ -87,7 +110,7 @@ section{padding:72px 0}
 .earnBox label{display:block;font-size:13px;font-weight:800;margin-top:12px}
 .earnBox input,.earnBox select{width:100%;padding:13px;margin-top:6px;border:1px solid #d9dde6;border-radius:11px}
 .earnNote{font-size:12px;color:#667085;line-height:1.5;margin-top:12px}
-/* BOOKING */
+
 .booking{background:#f0f3f9}
 .bookingGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
 .bookingInfo h2{font-size:42px}
@@ -95,24 +118,45 @@ section{padding:72px 0}
 .form{background:#fff;color:var(--ink);padding:30px;border-radius:24px;box-shadow:0 20px 60px #10182818}
 .form h3{margin-top:0;font-size:25px}
 .form label{display:block;font-size:13px;font-weight:800;margin-top:12px}
-.form input,.form textarea,.form select{width:100%;padding:14px;margin-top:6px;border:1px solid #d9dde6;border-radius:11px;font-size:15px;outline:none}
-.form textarea{min-height:90px;resize:vertical}.form .btn{width:100%;margin-top:18px}
+.form input,.form textarea,.form select{width:100%;padding:14px;margin-top:6px;border:1px solid #d9dde6;
+border-radius:11px;font-size:15px;outline:none}
+.form textarea{min-height:90px;resize:vertical}
+.form .btn{width:100%;margin-top:18px}
+
 .contact{background:#fff}
 .contactGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .contactCard{padding:24px;border:1px solid var(--border);border-radius:20px;background:#fff}
-.contactCard strong{display:block;margin-bottom:8px}.contactCard span{color:var(--muted)}
+.contactCard strong{display:block;margin-bottom:8px}
+.contactCard span{color:var(--muted)}
+
 footer{background:#06132a;color:#fff;padding:38px 0}
-.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.muted{color:#aeb7c9}
-.whatsapp{position:fixed;right:20px;bottom:20px;z-index:200;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 10px 30px #0003}
+.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.muted{color:#aeb7c9}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:200;width:58px;height:58px;border-radius:50%;
+background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;
+box-shadow:0 10px 30px #0003}
+
 @media(max-width:850px){
- .links{display:none}.heroGrid,.aboutGrid,.earningGrid,.bookingGrid{grid-template-columns:1fr}
- .hero h1{font-size:42px}.grid{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr 1fr}
- .packages{grid-template-columns:1fr}.package.popular{transform:none}.contactGrid{grid-template-columns:1fr}
+ .links{display:none}
+ .heroGrid,.aboutGrid,.earningGrid,.bookingGrid{grid-template-columns:1fr}
+ .hero h1{font-size:42px}
+ .grid{grid-template-columns:1fr 1fr}
+ .features{grid-template-columns:1fr 1fr}
+ .packages{grid-template-columns:1fr}
+ .package.popular{transform:none}
+ .contactGrid{grid-template-columns:1fr}
 }
 @media(max-width:520px){
- .logo{width:112px}.headerBtns .outline{display:none}.headerBtns .btn{padding:10px 14px;font-size:12px}
- .hero{padding:48px 0}.hero h1{font-size:36px}.hero p{font-size:16px}.grid,.features,.earnSteps{grid-template-columns:1fr}
- .title{font-size:30px}.bookingInfo h2{font-size:32px}.foot{flex-direction:column;text-align:center}
+ .logo{width:118px;height:56px}
+ .headerBtns .outline{display:none}
+ .headerBtns .btn{padding:10px 14px;font-size:12px}
+ .hero{padding:48px 0}
+ .hero h1{font-size:36px}
+ .hero p{font-size:16px}
+ .grid,.features,.earnSteps{grid-template-columns:1fr}
+ .title{font-size:30px}
+ .bookingInfo h2{font-size:32px}
+ .foot{flex-direction:column;text-align:center}
 }
 </style>
 </head>
@@ -122,8 +166,12 @@ footer{background:#06132a;color:#fff;padding:38px 0}
 <div class="wrap nav">
 <a href="#home"><img class="logo" src="assets/tavegt-logo.png" alt="Tavegt Logo"></a>
 <nav class="links">
-<a href="#home">Home</a><a href="#services">Services</a><a href="#cleaning">Cleaning</a>
-<a href="#about">About</a><a href="#earning">Earning</a><a href="#booking">Book</a>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#cleaning">Cleaning</a>
+<a href="#about">About</a>
+<a href="#earning">Earning</a>
+<a href="#booking">Book</a>
 </nav>
 <div class="headerBtns">
 <a class="btn outline" href="tel:+917302271502">Call</a>
@@ -146,9 +194,7 @@ footer{background:#06132a;color:#fff;padding:38px 0}
 <div class="heroPoints"><span>✓ Easy Booking</span><span>✓ Local Support</span><span>✓ Direct WhatsApp</span></div>
 </div>
 <div class="heroCard">
-  <img src="WhatsApp Image 2026-10-01 at 07.29.50.jpeg" alt="Tavegt">
-  <img src="WhatsApp Image 2026-10-01 at 07.29.50 (1).jpeg" alt="Tavegt">
-  <img src="WhatsApp Image 2026-10-01 at 07.29.51.jpeg" alt="Tavegt">
+<img src="assets/about-tavegt.jpg" alt="Tavegt About and Founder">
 </div>
 </div>
 </section>
@@ -156,15 +202,50 @@ footer{background:#06132a;color:#fff;padding:38px 0}
 <section class="services" id="services">
 <div class="wrap">
 <h2 class="title">Tavegt Ki Services</h2>
-<p class="subtitle">Aap apni pasand ki service choose karein. Booking request seedhe Tavegt WhatsApp par bheji ja sakti hai.</p>
+<p class="subtitle">Har service ko uski relevant photo ke saath dekhiye aur seedha booking request bhejiye.</p>
 <div class="grid">
 
-<div class="card"><div class="ico">🧹</div><h3>Cleaning Services</h3><p>Water tank aur pipeline cleaning par special focus.</p><a class="btn" href="#cleaning">View Packages</a></div>
-<div class="card"><div class="ico">🎉</div><h3>Decoration & Events</h3><p>Birthday, party, functions aur special events ke liye decoration support.</p><a class="btn" href="#booking" onclick="setService('Decoration & Events')">Book Now</a></div>
-<div class="card"><div class="ico">🍽️</div><h3>Catering & Food</h3><p>Events aur functions ke liye food aur catering arrangements.</p><a class="btn" href="#booking" onclick="setService('Catering & Food')">Book Now</a></div>
-<div class="card"><div class="ico">👷</div><h3>Manpower</h3><p>Events aur zaroorat ke hisaab se manpower support.</p><a class="btn" href="#booking" onclick="setService('Manpower')">Book Now</a></div>
-<div class="card"><div class="ico">💌</div><h3>Invitation Service</h3><p>Special occasions ke liye invitation related services.</p><a class="btn" href="#booking" onclick="setService('Invitation Service')">Book Now</a></div>
-<div class="card"><div class="ico">🛍️</div><h3>Online Shopping / Store</h3><p>Tavegt ke future shopping/store model ke liye enquiry aur updates.</p><a class="btn" href="#booking" onclick="setService('Online Shopping / Store')">Enquire Now</a></div>
+<div class="card">
+<img class="cardImage" src="assets/cleaning.jpg" alt="Tavegt Tank and Pipeline Cleaning">
+<h3>Cleaning Services</h3>
+<p>Water tank aur pipeline cleaning par current launch focus.</p>
+<a class="btn" href="#cleaning">View Packages</a>
+</div>
+
+<div class="card">
+<img class="cardImage" src="assets/decoration.jpg" alt="Tavegt Decoration Services">
+<h3>Decoration & Events</h3>
+<p>Wedding, party, stage, lighting aur event decoration support.</p>
+<a class="btn" href="#booking" onclick="setService('Decoration & Events')">Book Now</a>
+</div>
+
+<div class="card">
+<img class="cardImage" src="assets/events-catering.jpg" alt="Tavegt Events and Catering">
+<h3>Events & Catering</h3>
+<p>Wedding, birthday, corporate aur family functions ke liye catering & event support.</p>
+<a class="btn" href="#booking" onclick="setService('Events & Catering')">Book Now</a>
+</div>
+
+<div class="card">
+<img class="cardImage" src="assets/catering-live.jpg" alt="Tavegt Live Catering">
+<h3>Catering & Food</h3>
+<p>Live food counters aur event catering arrangements.</p>
+<a class="btn" href="#booking" onclick="setService('Catering & Food')">Book Now</a>
+</div>
+
+<div class="card">
+<img class="cardImage" src="assets/about-tavegt.jpg" alt="Tavegt Invitation and Brand Services">
+<h3>Invitation Service</h3>
+<p>Special occasions ke invitation related requirements ke liye enquiry.</p>
+<a class="btn" href="#booking" onclick="setService('Invitation Service')">Book Now</a>
+</div>
+
+<div class="card">
+<img class="cardImage" src="assets/diwali-offer.jpg" alt="Tavegt Festival Offer">
+<h3>Festival & Special Offers</h3>
+<p>Seasonal cleaning aur event offers ki latest information yahan milegi.</p>
+<a class="btn" href="#offers">View Offers</a>
+</div>
 
 </div>
 </div>
@@ -183,20 +264,37 @@ footer{background:#06132a;color:#fff;padding:38px 0}
 <div class="wrap">
 <h2 class="title">Water Tank & Pipeline Cleaning</h2>
 <p class="subtitle">Current launch packages. Final scope aur price service location/requirement ke hisaab se confirm kiya ja sakta hai.</p>
+<div class="cleaningHero"><img src="assets/cleaning.jpg" alt="Professional Tank and Pipeline Cleaning"></div>
+
 <div class="packages">
-<div class="package"><h3>Basic</h3><div class="price">₹500</div><ul><li>Basic tank cleaning</li><li>Basic cleaning support</li><li>Local service</li><li>Booking support</li></ul><button class="btn" onclick="selectPackage('Basic - ₹500')">Book Basic</button></div>
-<div class="package popular"><div class="popularTag">POPULAR</div><h3>Standard</h3><div class="price">₹750</div><ul><li>Tank cleaning</li><li>Pipeline cleaning</li><li>Detailed cleaning support</li><li>Booking support</li></ul><button class="btn" onclick="selectPackage('Standard - ₹750')">Book Standard</button></div>
-<div class="package"><h3>Premium</h3><div class="price">₹1,000</div><ul><li>Tank cleaning</li><li>Pipeline cleaning</li><li>Premium cleaning support</li><li>Priority booking</li></ul><button class="btn" onclick="selectPackage('Premium - ₹1,000')">Book Premium</button></div>
+<div class="package">
+<h3>Basic</h3><div class="price">₹500</div>
+<ul><li>Basic tank cleaning</li><li>Basic cleaning support</li><li>Local service</li><li>Booking support</li></ul>
+<button class="btn" onclick="selectPackage('Basic - ₹500')">Book Basic</button>
+</div>
+
+<div class="package popular">
+<div class="popularTag">POPULAR</div>
+<h3>Standard</h3><div class="price">₹750</div>
+<ul><li>Tank cleaning</li><li>Pipeline cleaning</li><li>Detailed cleaning support</li><li>Booking support</li></ul>
+<button class="btn" onclick="selectPackage('Standard - ₹750')">Book Standard</button>
+</div>
+
+<div class="package">
+<h3>Premium</h3><div class="price">₹1,000</div>
+<ul><li>Tank cleaning</li><li>Pipeline cleaning</li><li>Premium cleaning support</li><li>Priority booking</li></ul>
+<button class="btn" onclick="selectPackage('Premium - ₹1,000')">Book Premium</button>
+</div>
 </div>
 </div>
 </section>
 
 <section class="about" id="about">
 <div class="wrap aboutGrid">
-<div><img class="aboutImage" src=<img class="aboutImage" src="WhatsApp%20Image%202026-10-01%20at%2007.29.51.jpeg" alt="About Tavegt - Founder and Tavegt"> alt="About Tavegt - Founder and Tavegt information"></div>
+<div><img class="aboutImage" src="assets/about-tavegt.jpg" alt="Tavegt Founder and About Us"></div>
 <div class="aboutText">
 <h2>About Tavegt</h2>
-<p>Tavegt ek local all-in-one service platform hai. Hamara goal hai ki customers ko daily needs aur special events ki useful services ek hi jagah aasaani se mil sakein.</p>
+<p>Tavegt ek village-based local service platform hai. Hamara goal hai ki customers ko daily needs, cleaning aur special events ki useful services ek hi trusted brand ke under aasaani se mil sakein.</p>
 <div class="check"><span>✓</span> Simple booking process</div>
 <div class="check"><span>✓</span> Local service support</div>
 <div class="check"><span>✓</span> Multiple services under one brand</div>
@@ -206,22 +304,30 @@ footer{background:#06132a;color:#fff;padding:38px 0}
 </div>
 </section>
 
-<!-- EARNING SYSTEM: front-end lead/referral module. Actual central tracking/payout needs a backend/database. -->
+<section class="offer" id="offers">
+<div class="wrap">
+<h2 class="title">Tavegt Festival & Special Offers</h2>
+<p class="subtitle">Current seasonal information aur offers ko visual form mein dekhiye.</p>
+<img src="assets/diwali-offer.jpg" alt="Tavegt Diwali and Wedding Season Offer">
+</div>
+</section>
+
 <section class="earning" id="earning">
 <div class="wrap">
 <h2 class="title">Tavegt Earning System</h2>
-<p class="subtitle">Tavegt ke saath customer refer karke aur service leads laakar earning opportunity ke liye partner request bhejiye.</p>
+<p class="subtitle">Customer referrals aur service leads ke liye partner request bhejne ka simple front-end system.</p>
 <div class="earningGrid">
 <div class="earnCard">
 <h3>Kaise kaam karega?</h3>
 <div class="earnSteps">
-<div class="earnStep"><b>01 • Join</b>Partner ke roop mein apni basic details bhejiye.</div>
+<div class="earnStep"><b>01 • Join</b>Partner ke roop mein basic details bhejiye.</div>
 <div class="earnStep"><b>02 • Refer</b>Apne contacts ko Tavegt services ke baare mein batayein.</div>
 <div class="earnStep"><b>03 • Lead</b>Customer ki booking Tavegt tak pahunchayein.</div>
-<div class="earnStep"><b>04 • Earn</b>Approved service/referral ke terms ke hisaab se commission milega.</div>
+<div class="earnStep"><b>04 • Earn</b>Approved service/referral terms ke hisaab se commission milega.</div>
 </div>
-<p style="color:#cbd6e8;line-height:1.6;margin-top:20px">Note: Is static website mein abhi lead WhatsApp se aayegi. Automatic referral tracking, wallet aur payouts ko baad mein database/backend ke saath connect kiya ja sakta hai.</p>
+<p style="color:#cbd6e8;line-height:1.6;margin-top:20px">Automatic referral tracking, wallet aur payouts ko future mein database/backend ke saath connect kiya ja sakta hai.</p>
 </div>
+
 <div class="earnBox">
 <h3>Partner / Referral Request</h3>
 <label>Name</label><input id="earnName" placeholder="Apna naam">
@@ -244,14 +350,27 @@ footer{background:#06132a;color:#fff;padding:38px 0}
 <p><strong>Fast • Simple • Direct</strong></p>
 <p><a class="btn green" href="https://wa.me/917302271502" target="_blank">WhatsApp: 7302271502</a></p>
 </div>
+
 <div class="form">
 <h3>Book Your Service</h3>
 <label>Your Name</label><input id="name" type="text" placeholder="Apna naam likhein">
 <label>Mobile Number</label><input id="phone" type="tel" placeholder="Mobile number">
 <label>Select Service</label>
-<select id="service"><option value="">Select Service</option><option>Water Tank & Pipeline Cleaning</option><option>Decoration & Events</option><option>Catering & Food</option><option>Manpower</option><option>Invitation Service</option><option>Online Shopping / Store</option><option>Other Service</option></select>
+<select id="service">
+<option value="">Select Service</option>
+<option>Water Tank & Pipeline Cleaning</option>
+<option>Decoration & Events</option>
+<option>Events & Catering</option>
+<option>Catering & Food</option>
+<option>Invitation Service</option>
+<option>Other Service</option>
+</select>
 <label>Select Package</label>
-<select id="package"><option value="">Select Package</option><option>Basic - ₹500</option><option>Standard - ₹750</option><option>Premium - ₹1,000</option><option>Not Applicable</option></select>
+<select id="package">
+<option value="">Select Package</option>
+<option>Basic - ₹500</option><option>Standard - ₹750</option><option>Premium - ₹1,000</option>
+<option>Not Applicable</option>
+</select>
 <label>Address / Location</label><input id="address" type="text" placeholder="Service kahan chahiye?">
 <label>Message</label><textarea id="message" placeholder="Apni requirement likhein"></textarea>
 <button class="btn green" onclick="sendBooking()">📲 Send Booking on WhatsApp</button>
@@ -287,11 +406,13 @@ function setService(service){
   document.getElementById("service").value=service;
   document.getElementById("package").value="Not Applicable";
 }
+
 function selectPackage(packageName){
   document.getElementById("service").value="Water Tank & Pipeline Cleaning";
   document.getElementById("package").value=packageName;
   document.getElementById("booking").scrollIntoView({behavior:"smooth"});
 }
+
 function sendBooking(){
   const name=document.getElementById("name").value.trim();
   const phone=document.getElementById("phone").value.trim();
@@ -299,17 +420,42 @@ function sendBooking(){
   const pkg=document.getElementById("package").value;
   const address=document.getElementById("address").value.trim();
   const message=document.getElementById("message").value.trim();
-  if(!name||!phone||!service||!address){alert("Please naam, mobile, service aur address fill karein.");return;}
-  const text=`🌸 TAVEGT BOOKING REQUEST\n\n👤 Name: ${name}\n📱 Mobile: ${phone}\n🛠️ Service: ${service}\n💰 Package: ${pkg||"Not selected"}\n📍 Address: ${address}\n📝 Message: ${message||"None"}`;
+
+  if(!name||!phone||!service||!address){
+    alert("Please naam, mobile, service aur address fill karein.");
+    return;
+  }
+
+  const text=`🌸 TAVEGT BOOKING REQUEST
+
+👤 Name: ${name}
+📱 Mobile: ${phone}
+🛠️ Service: ${service}
+💰 Package: ${pkg||"Not selected"}
+📍 Address: ${address}
+📝 Message: ${message||"None"}`;
+
   window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(text),"_blank");
 }
+
 function sendEarningRequest(){
   const name=document.getElementById("earnName").value.trim();
   const phone=document.getElementById("earnPhone").value.trim();
   const area=document.getElementById("earnArea").value.trim();
   const type=document.getElementById("earnType").value;
-  if(!name||!phone||!area){alert("Please name, mobile aur area fill karein.");return;}
-  const text=`💰 TAVEGT PARTNER / EARNING REQUEST\n\n👤 Name: ${name}\n📱 Mobile: ${phone}\n📍 Area: ${area}\n🤝 Interested In: ${type}`;
+
+  if(!name||!phone||!area){
+    alert("Please name, mobile aur area fill karein.");
+    return;
+  }
+
+  const text=`💰 TAVEGT PARTNER / EARNING REQUEST
+
+👤 Name: ${name}
+📱 Mobile: ${phone}
+📍 Area: ${area}
+🤝 Interested In: ${type}`;
+
   window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(text),"_blank");
 }
 </script>
