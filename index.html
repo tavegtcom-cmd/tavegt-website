@@ -3,351 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#10243e">
+<meta name="theme-color" content="#0b1f3a">
+<meta name="description" content="TAVEGT LTD - चुनिए, अपनी पसंद। Home services, cleaning, events, catering, manpower and online store.">
 <title>TAVEGT LTD | चुनिए, अपनी पसंद</title>
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f4f7fb;color:#17243a}
-header{background:#10243e;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.logo{font-size:27px;font-weight:bold;color:#ffbd59}
-.logo span{color:white}
-nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
-.hero{background:linear-gradient(120deg,#10243e,#0879dc);color:white;padding:55px 6%;text-align:center}
-.hero h1{font-size:34px;margin-bottom:12px}
-.hero p{font-size:17px;margin-bottom:22px}
-.btn{display:inline-block;padding:12px 20px;background:#ff8a24;color:white;text-decoration:none;border:0;border-radius:8px;font-weight:bold;cursor:pointer;margin:5px}
-.btn.blue{background:#0879dc}
-.btn.dark{background:#10243e}
-section{padding:35px 5%}
-.heading{text-align:center;margin-bottom:24px}
-.heading h2{font-size:27px;color:#10243e}
-.heading p{color:#68768a;margin-top:7px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
-.card{background:white;padding:20px;border-radius:13px;box-shadow:0 4px 15px #10243e12}
-.card h3{margin:10px 0;color:#10243e}
-.card p{color:#65738a;font-size:14px;line-height:1.6}
-.emoji{font-size:38px}
-.price{font-size:21px;color:#0879dc;font-weight:bold;margin:12px 0}
-input,select,textarea{width:100%;padding:12px;border:1px solid #d5dce7;border-radius:7px;margin:7px 0;font-size:15px}
-label{font-size:14px;font-weight:bold}
-.formbox{max-width:550px;margin:auto;background:white;padding:22px;border-radius:13px;box-shadow:0 4px 15px #10243e12}
-.storebar{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.storebar button{border:1px solid #0879dc;background:white;color:#0879dc;padding:9px 14px;border-radius:20px;cursor:pointer}
-.product{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px #10243e12;padding:16px}
-.product .photo{height:115px;background:#eef5fc;display:grid;place-items:center;font-size:55px;border-radius:9px}
-.product h3{margin-top:12px}
-.product small{color:#68768a}
-.product button{width:100%;margin-top:8px}
-.cart{background:#fff;border-radius:12px;padding:18px;margin-top:20px}
-footer{background:#10243e;color:white;text-align:center;padding:28px 15px;line-height:2}
-footer a{color:#ffbd59}
-.hide{display:none}
+:root{--navy:#0b1f3a;--blue:#0879dc;--orange:#ff7a1a;--bg:#f4f7fb;--ink:#17243a;--muted:#68778d;--line:#e5ebf3;--white:#fff;--green:#16834a;--shadow:0 12px 35px rgba(15,35,65,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{width:min(1180px,92%);margin:auto}.topbar{background:var(--navy);color:#dce8f7;font-size:13px;padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 3px 18px #0b1f3a0d}.headrow{display:flex;align-items:center;gap:22px;padding:15px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);min-width:190px}.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px;box-shadow:0 6px 15px #0879dc40}.brand strong{display:block;font-size:21px;letter-spacing:1px}.brand small{color:var(--muted);font-size:11px}.search{flex:1;display:flex;background:#f1f5fa;border:1px solid var(--line);border-radius:12px;overflow:hidden}.search input{border:0;background:transparent;padding:13px 15px;outline:0;min-width:0;flex:1}.search button{background:var(--blue);color:#fff;padding:0 20px;font-weight:700}.head-actions{display:flex;gap:9px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 16px;border-radius:10px;font-weight:700;text-decoration:none;transition:.2s}.btn-primary{background:var(--blue);color:#fff}.btn-dark{background:var(--navy);color:#fff}.btn-outline{border:1px solid var(--line);background:#fff;color:var(--navy)}.btn-orange{background:var(--orange);color:#fff}.btn:hover{transform:translateY(-1px);filter:brightness(.98)}.nav{border-top:1px solid var(--line)}.nav .wrap{display:flex;gap:25px;overflow:auto;white-space:nowrap;padding:11px 0}.nav a{color:#42536a;text-decoration:none;font-size:14px;font-weight:700}.nav a:hover{color:var(--blue)}.hero{padding:35px 0 22px}.hero-box{background:linear-gradient(115deg,#0b1f3a 0%,#124b80 58%,#0879dc 100%);border-radius:24px;color:#fff;padding:42px;display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;overflow:hidden;position:relative}.eyebrow{display:inline-block;background:#ffffff1c;border:1px solid #ffffff30;border-radius:30px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.5px}.hero h1{font-size:clamp(30px,4vw,48px);line-height:1.12;margin:17px 0 12px}.hero p{color:#d9e8f8;line-height:1.7;max-width:590px}.hero-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}.hero-art{min-height:230px;display:grid;place-items:center;position:relative}.hero-circle{width:240px;height:240px;border-radius:50%;background:linear-gradient(145deg,#ffffff35,#ffffff08);border:1px solid #ffffff45;display:grid;place-items:center;font-size:90px;box-shadow:inset 0 0 40px #ffffff16}.hero-stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:25px}.hero-stats b{display:block;font-size:19px}.hero-stats span{font-size:12px;color:#c9def2}.section{padding:28px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:18px}.section-head h2{margin:0;color:var(--navy);font-size:26px}.section-head p{margin:6px 0 0;color:var(--muted);font-size:14px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.dept{background:#fff;border:1px solid var(--line);border-radius:17px;padding:21px;box-shadow:var(--shadow);display:flex;gap:15px;align-items:flex-start}.dept-icon{width:54px;height:54px;border-radius:15px;background:#eaf4ff;display:grid;place-items:center;font-size:27px;flex-shrink:0}.dept h3{margin:2px 0 7px;font-size:17px;color:var(--navy)}.dept p{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.55}.link{color:var(--blue);font-weight:700;text-decoration:none;font-size:13px}.feature{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}.feature img{width:100%;height:300px;object-fit:cover}.feature-copy{padding:25px}.feature-copy h2{font-size:27px;color:var(--navy);margin:8px 0}.feature-copy p{color:var(--muted);line-height:1.7}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.chip{background:#edf5ff;color:#17558e;padding:7px 10px;border-radius:30px;font-size:12px;font-weight:700}.store-tools{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.store-tools input,.store-tools select{padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;outline:0}.store-tools input{flex:1;min-width:180px}.categories{display:flex;gap:9px;overflow:auto;padding:4px 0 13px}.catbtn{white-space:nowrap;background:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:30px;color:#42536a;font-weight:700}.catbtn.active{background:var(--navy);color:#fff;border-color:var(--navy)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.product{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 5px 20px #0b1f3a08;display:flex;flex-direction:column}.product img{width:100%;height:165px;object-fit:cover;background:#edf1f6}.product-body{padding:13px;display:flex;flex-direction:column;flex:1}.product-cat{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase}.product h3{font-size:15px;margin:6px 0;color:var(--navy)}.product p{font-size:12px;color:var(--muted);line-height:1.45;margin:0 0 10px;flex:1}.price{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:10px}.price small{font-size:11px;color:var(--muted);font-weight:400}.product-actions{display:flex;gap:7px}.product-actions button{flex:1;padding:9px 7px;border-radius:8px;font-size:12px;font-weight:700}.add{background:var(--blue);color:#fff}.buy{background:#fff0e6;color:#c65b0b}.empty{grid-column:1/-1;text-align:center;background:#fff;border:1px dashed #cbd6e4;border-radius:14px;padding:35px;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{background:#fff;padding:19px;border:1px solid var(--line);border-radius:14px}.step b{display:block;color:var(--navy);margin:8px 0}.step span{font-size:13px;color:var(--muted);line-height:1.5}.about{background:var(--navy);color:#fff;border-radius:20px;padding:30px;display:grid;grid-template-columns:1.3fr .7fr;gap:25px;align-items:center}.about p{color:#cfdaea;line-height:1.7}.about-mark{font-size:58px;text-align:center}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.panel h3{margin-top:0;color:var(--navy)}.field{display:grid;gap:6px;margin-bottom:12px}.field label{font-size:13px;font-weight:700;color:#42536a}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #dce4ef;border-radius:9px;outline-color:var(--blue)}.field textarea{min-height:75px;resize:vertical}.footer{background:#07172b;color:#d5e0ed;margin-top:30px;padding:32px 0 18px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:25px}.footer h3,.footer h4{color:#fff}.footer p,.footer a{color:#bdcadd;font-size:13px;line-height:1.8;text-decoration:none}.copyright{border-top:1px solid #ffffff20;margin-top:22px;padding-top:15px;font-size:12px;color:#9fb0c5}.float-wa{position:fixed;right:18px;bottom:18px;background:#19a65a;color:#fff;padding:13px 17px;border-radius:40px;text-decoration:none;font-weight:800;box-shadow:0 8px 25px #0003;z-index:30}.cart-fab{position:fixed;left:18px;bottom:18px;background:var(--navy);color:#fff;border-radius:40px;padding:13px 17px;font-weight:800;box-shadow:0 8px 25px #0003;z-index:30}.overlay{position:fixed;inset:0;background:#0613269c;z-index:50;display:none;align-items:center;justify-content:center;padding:15px}.overlay.show{display:flex}.modal{background:#fff;border-radius:18px;width:min(650px,100%);max-height:90vh;overflow:auto;padding:22px;box-shadow:0 20px 60px #0004}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}.modal-head h2{margin:0;color:var(--navy);font-size:22px}.close{background:#eef2f7;border-radius:8px;padding:7px 11px;font-size:18px}.cart-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.qty{display:flex;align-items:center;gap:8px}.qty button{width:27px;height:27px;border-radius:7px;background:#edf4fc;color:var(--navy);font-weight:900}.total{display:flex;justify-content:space-between;font-weight:800;font-size:19px;margin:17px 0;color:var(--navy)}.notice{font-size:12px;color:var(--muted);line-height:1.5;background:#f4f7fb;padding:11px;border-radius:9px;margin:10px 0}.admin-box{background:#fff;border:1px solid var(--line);padding:18px;border-radius:14px;margin:12px 0}.admin-list{display:grid;gap:8px}.admin-item{display:flex;justify-content:space-between;gap:10px;padding:9px;border:1px solid var(--line);border-radius:9px;align-items:center;font-size:13px}.admin-item button{background:#fff0f0;color:#b42318;padding:7px 9px;border-radius:7px}.hidden{display:none!important}
+@media(max-width:850px){.headrow{flex-wrap:wrap;gap:12px}.brand{min-width:unset}.search{order:3;flex-basis:100%}.head-actions{margin-left:auto}.grid{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(3,1fr)}.hero-box{padding:30px}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.topbar .wrap{justify-content:center;text-align:center}.headrow{padding:10px 0}.brand strong{font-size:18px}.logo{width:40px;height:40px}.head-actions .btn{padding:9px 11px;font-size:12px}.nav .wrap{gap:18px}.hero{padding-top:18px}.hero-box{grid-template-columns:1fr;padding:25px 20px;border-radius:18px}.hero-art{min-height:130px}.hero-circle{width:130px;height:130px;font-size:52px}.hero-stats{gap:15px}.grid{grid-template-columns:1fr}.feature{grid-template-columns:1fr}.feature img{height:200px}.products{grid-template-columns:repeat(2,1fr);gap:10px}.product img{height:125px}.product-body{padding:10px}.product h3{font-size:13px}.product p{font-size:11px}.product-actions{flex-direction:column}.steps{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.about-mark{display:none}.contact-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.section-head h2{font-size:22px}.float-wa{right:10px;bottom:10px}.cart-fab{left:10px;bottom:10px}}
 </style>
 </head>
-
 <body>
-
-<header>
- <div class="logo">TAVEGT <span>LTD</span></div>
- <nav>
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#store">Store</a>
-  <a href="#booking">Booking</a>
- </nav>
+<div class="topbar"><div class="wrap"><span>भारत में आपकी पसंद की सेवाएँ और सामान</span><span>Meerut • Uttar Pradesh | COD उपलब्धता की पुष्टि के बाद</span></div></div>
+<header class="header">
+ <div class="wrap headrow">
+  <a class="brand" href="#home"><span class="logo">T</span><span><strong>TAVEGT LTD</strong><small>चुनिए, अपनी पसंद</small></span></a>
+  <form class="search" onsubmit="event.preventDefault();document.getElementById('store').scrollIntoView();filterProducts();"><input id="searchInput" placeholder="सामान खोजें — जैसे Neem Datun, Snacks..." aria-label="Search products"><button type="submit">खोजें</button></form>
+  <div class="head-actions"><button class="btn btn-outline" onclick="openCart()">🛒 Cart <span id="cartCount">0</span></button><a class="btn btn-primary" href="#contact">संपर्क</a></div>
+ </div>
+ <nav class="nav"><div class="wrap"><a href="#home">होम</a><a href="#departments">सभी सेवाएँ</a><a href="#featured">Cleaning</a><a href="#store">TAVEGT STORE</a><a href="#how">कैसे ऑर्डर करें</a><a href="#about">हमारे बारे में</a></div></nav>
 </header>
-
-<div class="hero" id="home">
- <h1>चुनिए, अपनी पसंद</h1>
- <p>आपकी जरूरतों की हर सेवा और सामान — एक ही जगह</p>
- <a class="btn" href="#services">हमारी Services</a>
- <a class="btn" href="#store">TAVEGT STORE</a>
-</div>
-
-<section id="services">
- <div class="heading">
-  <h2>हमारी Services</h2>
-  <p>घर और व्यवसाय की जरूरतों के लिए भरोसेमंद सेवाएँ</p>
- </div>
-
- <div class="grid">
-  <div class="card">
-   <div class="emoji">🚰</div>
-   <h3>Water Tank Cleaning</h3>
-   <p>पानी की टंकी की सफाई और स्वच्छता संबंधी सेवा।</p>
-   <div class="price">₹500 से शुरू</div>
-   <button class="btn blue" onclick="chooseService('Water Tank Cleaning')">Book Now</button>
-  </div>
-
-  <div class="card">
-   <div class="emoji">🔧</div>
-   <h3>Pipeline Cleaning</h3>
-   <p>पानी की पाइपलाइन की सफाई और पानी के बहाव की समस्या।</p>
-   <button class="btn blue" onclick="chooseService('Pipeline Cleaning')">Book Now</button>
-  </div>
-
-  <div class="card">
-   <div class="emoji">🎉</div>
-   <h3>Decoration & Events</h3>
-   <p>जन्मदिन, शादी और अन्य कार्यक्रमों की सजावट।</p>
-   <button class="btn blue" onclick="chooseService('Decoration & Events')">Book Now</button>
-  </div>
-
-  <div class="card">
-   <div class="emoji">🍽️</div>
-   <h3>Catering & Food</h3>
-   <p>कार्यक्रमों के लिए भोजन और कैटरिंग व्यवस्था।</p>
-   <button class="btn blue" onclick="chooseService('Catering & Food')">Book Now</button>
-  </div>
-
-  <div class="card">
-   <div class="emoji">👷</div>
-   <h3>Manpower Service</h3>
-   <p>जरूरत के अनुसार कामगार और कर्मचारी उपलब्ध कराने की सेवा।</p>
-   <button class="btn blue" onclick="chooseService('Manpower Service')">Book Now</button>
-  </div>
-
-  <div class="card">
-   <div class="emoji">💌</div>
-   <h3>Invitation Service</h3>
-   <p>शादी और कार्यक्रमों के निमंत्रण कार्ड।</p>
-   <button class="btn blue" onclick="chooseService('Invitation Service')">Book Now</button>
-  </div>
- </div>
-</section>
-
-<section id="store">
- <div class="heading">
-  <h2>🛍️ TAVEGT STORE</h2>
-  <p>अपनी पसंद के सामान चुनें और WhatsApp पर ऑर्डर करें</p>
- </div>
-
- <div class="storebar">
-  <button onclick="filterProducts('All')">All</button>
-  <button onclick="filterProducts('Food')">Food</button>
-  <button onclick="filterProducts('Personal Care')">Personal Care</button>
-  <button onclick="filterProducts('Home')">Home</button>
-  <button onclick="filterProducts('Daily Needs')">Daily Needs</button>
- </div>
-
- <div class="grid" id="products"></div>
-
- <div class="cart">
-  <h3>🛒 आपका Cart</h3>
-  <div id="cartItems">अभी Cart खाली है।</div>
-  <h3 id="cartTotal">Total: ₹0</h3>
-  <button class="btn blue" onclick="orderCart()">WhatsApp से Order करें</button>
- </div>
-</section>
-
-<section id="booking">
- <div class="heading">
-  <h2>Service Booking</h2>
-  <p>अपनी जानकारी भरें, हम आपसे संपर्क करेंगे।</p>
- </div>
-
- <div class="formbox">
-  <label>आपका नाम</label>
-  <input id="bName" placeholder="अपना नाम लिखें">
-
-  <label>मोबाइल नंबर</label>
-  <input id="bPhone" type="tel" placeholder="मोबाइल नंबर">
-
-  <label>Service चुनें</label>
-  <select id="bService">
-   <option value="">Service चुनें</option>
-   <option>Water Tank Cleaning</option>
-   <option>Pipeline Cleaning</option>
-   <option>Decoration & Events</option>
-   <option>Catering & Food</option>
-   <option>Manpower Service</option>
-   <option>Invitation Service</option>
-  </select>
-
-  <label>पूरा पता</label>
-  <textarea id="bAddress" placeholder="गाँव, जिला और पूरा पता"></textarea>
-
-  <label>अन्य जानकारी</label>
-  <textarea id="bDetails" placeholder="अपनी समस्या या जरूरत लिखें"></textarea>
-
-  <button class="btn blue" style="width:100%" onclick="sendBooking()">WhatsApp पर Booking भेजें</button>
- </div>
-</section>
-
-<section id="admin">
- <div class="heading">
-  <h2>Admin Panel</h2>
-  <p>अपने Store के Products मैनेज करें</p>
- </div>
-
- <div class="formbox">
-  <h3>Admin Login</h3>
-  <input id="adminPass" type="password" placeholder="Admin Password">
-  <button class="btn dark" onclick="adminLogin()">Login</button>
-
-  <div id="adminArea" class="hide">
-   <hr style="margin:18px 0">
-   <h3>नया Product जोड़ें</h3>
-   <input id="pName" placeholder="Product का नाम">
-   <input id="pPrice" type="number" placeholder="कीमत ₹">
-   <input id="pEmoji" placeholder="Product Emoji जैसे 🌿">
-   <select id="pCategory">
-    <option>Food</option>
-    <option>Personal Care</option>
-    <option>Home</option>
-    <option>Daily Needs</option>
-   </select>
-   <button class="btn blue" onclick="addProduct()">Add Product</button>
-   <p id="adminMessage"></p>
-   <button class="btn dark" onclick="resetProducts()">Demo Products वापस लाएँ</button>
-  </div>
- </div>
-</section>
-
-<footer>
- <h2>TAVEGT LTD</h2>
- <p>चुनिए, अपनी पसंद</p>
- <p>Meerut | Uttar Pradesh</p>
- <p>WhatsApp: 7302271502</p>
- <p>© 2026 TAVEGT LTD. All Rights Reserved.</p>
-</footer>
-
-<a href="https://wa.me/917302271502" class="btn" style="position:fixed;bottom:18px;right:15px;border-radius:30px">WhatsApp</a>
-
+<main>
+<section class="hero" id="home"><div class="wrap"><div class="hero-box">
+ <div><span class="eyebrow">YOUR EVERYDAY SERVICE & SHOPPING PLATFORM</span><h1>हर ज़रूरत के लिए<br>एक भरोसेमंद जगह</h1><p>TAVEGT LTD के साथ चुनिए अपनी पसंद — घर की ज़रूरी सेवाएँ, सफाई, इवेंट, फूड और रोज़मर्रा के सामान की खरीदारी।</p><div class="hero-buttons"><a class="btn btn-orange" href="#store">🛍️ अभी खरीदारी करें</a><a class="btn btn-outline" style="background:#ffffff16;color:#fff;border-color:#ffffff55" href="#departments">सभी सेवाएँ देखें</a></div><div class="hero-stats"><div><b>6+</b><span>सेवा विभाग</span></div><div><b>Easy</b><span>WhatsApp ऑर्डर</span></div><div><b>Local</b><span>Meerut से शुरुआत</span></div></div></div>
+ <div class="hero-art"><div class="hero-circle">🛍️</div></div>
+</div></div></section>
+<section class="section" id="departments"><div class="wrap"><div class="section-head"><div><h2>हमारे Service Departments</h2><p>अपनी ज़रूरत का विभाग चुनें और जानकारी पाएँ।</p></div></div><div class="grid">
+ <article class="dept"><div class="dept-icon">🚿</div><div><h3>Cleaning & Maintenance</h3><p>Water tank cleaning, pipeline cleaning, basic home maintenance और inspection enquiries.</p><a class="link" href="#featured">विवरण देखें →</a></div></article>
+ <article class="dept"><div class="dept-icon">🎉</div><div><h3>Decoration & Events</h3><p>Birthday, शादी, छोटे-बड़े कार्यक्रमों के लिए decoration और event enquiries.</p><a class="link" href="#contact" onclick="chooseService('Decoration & Events')">बुकिंग पूछें →</a></div></article>
+ <article class="dept"><div class="dept-icon">🍽️</div><div><h3>Catering & Food</h3><p>कार्यक्रमों और जरूरत के अनुसार food तथा catering enquiry.</p><a class="link" href="#contact" onclick="chooseService('Catering & Food')">बुकिंग पूछें →</a></div></article>
+ <article class="dept"><div class="dept-icon">👷</div><div><h3>Manpower Services</h3><p>काम के अनुसार manpower और worker requirement की enquiry.</p><a class="link" href="#contact" onclick="chooseService('Manpower Services')">जानकारी लें →</a></div></article>
+ <article class="dept"><div class="dept-icon">💌</div><div><h3>Invitation Services</h3><p>कार्यक्रमों के लिए invitation card और digital invitation enquiry.</p><a class="link" href="#contact" onclick="chooseService('Invitation Services')">जानकारी लें →</a></div></article>
+ <article class="dept"><div class="dept-icon">🛒</div><div><h3>TAVEGT STORE</h3><p>Daily needs, grocery, food, snacks और household products की shopping.</p><a class="link" href="#store">स्टोर खोलें →</a></div></article>
+</div></div></section>
+<section class="section" id="featured"><div class="wrap"><div class="feature"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=85" alt="Clean bathroom and water system" onerror="this.src='https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80'"><div class="feature-copy"><span class="chip">मुख्य सेवा</span><h2>Water Tank & Pipeline Cleaning</h2><p>पानी की टंकी और पाइपलाइन की सफाई के लिए TAVEGT से संपर्क करें। काम की स्थिति देखकर सेवा और कीमत की पुष्टि की जाएगी।</p><div class="chips"><span class="chip">Tank Cleaning</span><span class="chip">Pipeline Cleaning</span><span class="chip">Inspection Enquiry</span></div><a class="btn btn-primary" href="#contact" onclick="chooseService('Water Tank & Pipeline Cleaning')">सेवा बुक करें</a></div></div></div></section>
+<section class="section" id="store"><div class="wrap"><div class="section-head"><div><h2>🛍️ TAVEGT STORE</h2><p>अपनी पसंद का सामान खोजें, Cart में जोड़ें और WhatsApp से ऑर्डर भेजें।</p></div><button class="btn btn-dark" onclick="openCart()">🛒 Cart खोलें</button></div>
+ <div class="store-tools"><input id="productSearch" placeholder="प्रोडक्ट का नाम खोजें..." oninput="filterProducts()"><select id="sortProducts" onchange="filterProducts()"><option value="default">सामान्य क्रम</option><option value="low">कम कीमत पहले</option><option value="high">ज़्यादा कीमत पहले</option></select></div>
+ <div class="categories" id="categoryBar"></div><div class="products" id="productGrid"></div>
+ <p class="notice">नोट: दिखाई गई शुरुआती कीमतें नमूना कीमतें हैं। ऑर्डर स्वीकार करने से पहले उपलब्धता, अंतिम कीमत, डिलीवरी शुल्क और डिलीवरी समय WhatsApp पर कन्फर्म करें।</p>
+</div></section>
+<section class="section" id="how"><div class="wrap"><div class="section-head"><div><h2>ऑर्डर करना आसान है</h2><p>कुछ आसान स्टेप में अपनी enquiry या shopping request भेजें।</p></div></div><div class="steps">
+ <div class="step"><div class="dept-icon">🔎</div><b>1. सामान/सेवा चुनें</b><span>अपनी पसंद का product या service चुनें।</span></div>
+ <div class="step"><div class="dept-icon">🛒</div><b>2. Cart में जोड़ें</b><span>सामान की quantity तय करें और cart देखें।</span></div>
+ <div class="step"><div class="dept-icon">📍</div><b>3. पता भरें</b><span>नाम, मोबाइल और delivery address दें।</span></div>
+ <div class="step"><div class="dept-icon">💬</div><b>4. WhatsApp पर भेजें</b><span>ऑर्डर की जानकारी TAVEGT को भेजें; पुष्टि के बाद ही ऑर्डर पक्का होगा।</span></div>
+</div></div></section>
+<section class="section" id="about"><div class="wrap"><div class="about"><div><span class="eyebrow">ABOUT TAVEGT LTD</span><h2>चुनिए, अपनी पसंद</h2><p>TAVEGT LTD एक multi-service और shopping platform के रूप में बनाया जा रहा है, जहाँ ग्राहक एक ही जगह पर अलग-अलग सेवाओं और रोज़मर्रा के सामान की जानकारी पा सकें। हमारा उद्देश्य आसान संपर्क, स्पष्ट जानकारी और भरोसेमंद सेवा अनुभव देना है।</p><a class="btn btn-orange" href="#contact">हमसे संपर्क करें</a></div><div class="about-mark">TAVEGT<br><span style="font-size:15px;letter-spacing:2px">YOUR CHOICE. ONE PLACE.</span></div></div></div></section>
+<section class="section" id="contact"><div class="wrap"><div class="section-head"><div><h2>संपर्क / Service Enquiry</h2><p>अपनी जरूरत बताइए, हम WhatsApp पर आपसे संपर्क करेंगे।</p></div></div><div class="contact-grid">
+ <div class="panel"><h3>अपनी जानकारी भरें</h3><form id="enquiryForm" onsubmit="sendEnquiry(event)">
+  <div class="field"><label>आपका नाम *</label><input id="cName" required placeholder="पूरा नाम"></div>
+  <div class="field"><label>मोबाइल नंबर *</label><input id="cPhone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10 अंकों का मोबाइल नंबर"></div>
+  <div class="field"><label>आपको कौन-सी सेवा चाहिए?</label><select id="cService"><option>Water Tank & Pipeline Cleaning</option><option>Decoration & Events</option><option>Catering & Food</option><option>Manpower Services</option><option>Invitation Services</option><option>TAVEGT Store Enquiry</option><option>Other</option></select></div>
+  <div class="field"><label>गाँव / शहर और पूरा पता *</label><textarea id="cAddress" required placeholder="अपना पता लिखें"></textarea></div>
+  <div class="field"><label>अतिरिक्त जानकारी</label><textarea id="cNote" placeholder="अपनी जरूरत बताएं (वैकल्पिक)"></textarea></div>
+  <button class="btn btn-primary" type="submit">WhatsApp पर Enquiry भेजें</button>
+ </form></div>
+ <div class="panel"><h3>TAVEGT LTD से जुड़ें</h3><p class="muted">सेवा, प्रोडक्ट उपलब्धता, कीमत और डिलीवरी की पुष्टि के लिए संपर्क करें।</p><p>📞 <b>7302271502</b></p><p>📍 Meerut, Uttar Pradesh और आसपास के क्षेत्र</p><p>🕘 समय: संपर्क करके पुष्टि करें</p><a class="btn btn-primary" href="https://wa.me/917302271502?text=Namaste%20TAVEGT%20LTD%2C%20mujhe%20jankari%20chahiye." target="_blank" rel="noopener">WhatsApp Chat करें</a><div class="notice">डिलीवरी क्षेत्र और उपलब्धता ऑर्डर के समय कन्फर्म की जाएगी। अभी वेबसाइट पर online payment gateway सक्रिय नहीं है।</div></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div><h3>TAVEGT LTD</h3><p>चुनिए, अपनी पसंद। Services और shopping — एक ही जगह।</p></div><div><h4>Quick Links</h4><p><a href="#departments">सभी सेवाएँ</a><br><a href="#store">TAVEGT STORE</a><br><a href="#about">About Us</a></p></div><div><h4>Customer Support</h4><p>WhatsApp: 7302271502<br>Meerut, Uttar Pradesh</p></div></div><div class="copyright">© <span id="year"></span> TAVEGT LTD. All rights reserved. | Product availability and final price are confirmed before order acceptance.</div></div></footer>
+<button class="cart-fab" onclick="openCart()">🛒 Cart <span id="cartCount2">0</span></button><a class="float-wa" href="https://wa.me/917302271502?text=Namaste%20TAVEGT%20LTD" target="_blank" rel="noopener">WhatsApp</a>
+<div class="overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()"><div class="modal"><div class="modal-head"><h2>🛒 आपका Cart</h2><button class="close" onclick="closeCart()">✕</button></div><div id="cartItems"></div><div class="total"><span>कुल (डिलीवरी से पहले)</span><span id="cartTotal">₹0</span></div><div class="notice">यह अनुमानित product total है। डिलीवरी शुल्क और अंतिम कीमत WhatsApp पर कन्फर्म होगी।</div><h3>Delivery Details</h3><form onsubmit="checkout(event)"><div class="field"><label>नाम *</label><input id="oName" required></div><div class="field"><label>मोबाइल नंबर *</label><input id="oPhone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10"></div><div class="field"><label>डिलीवरी पता *</label><textarea id="oAddress" required></textarea></div><div class="field"><label>डिलीवरी क्षेत्र</label><select id="oArea"><option>Meerut</option><option>Uttar Pradesh - Other City (availability confirmation required)</option></select></div><div class="field"><label>Payment Preference</label><select id="oPayment"><option>Cash on Delivery (availability confirmation required)</option><option>Online Payment - link/QR requested (not active on website)</option></select></div><button class="btn btn-primary" style="width:100%" type="submit">WhatsApp पर Order भेजें</button></form></div></div>
+<div class="overlay" id="adminOverlay" onclick="if(event.target===this)closeAdmin()"><div class="modal"><div class="modal-head"><h2>⚙️ TAVEGT Store Admin</h2><button class="close" onclick="closeAdmin()">✕</button></div><div id="adminLogin"><p class="muted">Demo Admin PIN डालें।</p><div class="field"><label>Admin PIN</label><input id="adminPin" type="password" placeholder="Default PIN: 2468"></div><button class="btn btn-primary" onclick="adminLogin()">Login</button><p class="notice">Demo PIN केवल शुरुआती local testing के लिए है। Public website पर इसे सुरक्षित login न मानें।</p></div><div id="adminPanel" class="hidden">
+ <div class="notice">यह panel इसी browser/device में product list सेव करता है। दूसरे ग्राहक के फोन पर बदलाव अपने-आप नहीं दिखेंगे। Shared admin और online database के लिए backend जरूरी है।</div>
+ <div class="admin-box"><h3 id="adminFormTitle">नया Product जोड़ें</h3><form onsubmit="saveProduct(event)"><input type="hidden" id="editId"><div class="field"><label>Product Name *</label><input id="pName" required></div><div class="field"><label>Category *</label><select id="pCategory"><option>Grocery</option><option>Food</option><option>Snacks</option><option>Household</option><option>Personal Care</option><option>Other</option></select></div><div class="field"><label>Price (₹) *</label><input id="pPrice" type="number" min="1" required></div><div class="field"><label>Image URL</label><input id="pImage" placeholder="https://..."></div><div class="field"><label>Description</label><textarea id="pDesc"></textarea></div><button class="btn btn-primary" type="submit">Product Save करें</button> <button class="btn btn-outline" type="button" onclick="resetProductForm()">Clear</button></form></div>
+ <h3>Products Manage करें</h3><div class="admin-list" id="adminProductList"></div><button class="btn btn-outline" style="margin-top:15px" onclick="exportProducts()">Products Backup Download</button>
+ </div></div></div>
 <script>
-const WHATSAPP = "917302271502";
-
-const demoProducts = [
- {id:1,name:"नीम की दातून",price:99,emoji:"🌿",category:"Personal Care"},
- {id:2,name:"हर्बल साबुन",price:60,emoji:"🧼",category:"Personal Care"},
- {id:3,name:"नमकीन पैक",price:50,emoji:"🍘",category:"Food"},
- {id:4,name:"बिस्कुट पैक",price:40,emoji:"🍪",category:"Food"},
- {id:5,name:"किचन क्लीनर",price:99,emoji:"🧴",category:"Home"},
- {id:6,name:"डेली यूज बैग",price:70,emoji:"🛍️",category:"Daily Needs"}
+const WA_NUMBER="917302271502";
+const defaultProducts=[
+{id:1,name:"Neem Datun Pack",category:"Personal Care",price:50,image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80",desc:"नीम दातून का पैक। उपलब्धता और पैक मात्रा WhatsApp पर कन्फर्म करें।"},
+{id:2,name:"Daily Grocery Combo",category:"Grocery",price:149,image:"https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80",desc:"रोजमर्रा की किराना जरूरतों के लिए नमूना combo।"},
+{id:3,name:"Namkeen & Snacks Pack",category:"Snacks",price:99,image:"https://images.unsplash.com/photo-1621939514649-280e2aa2f1c9?auto=format&fit=crop&w=700&q=80",desc:"स्नैक्स पैक की उपलब्धता और ब्रांड की पुष्टि करें।"},
+{id:4,name:"Household Essentials",category:"Household",price:199,image:"https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=700&q=80",desc:"घर में काम आने वाली जरूरी वस्तुएँ।"},
+{id:5,name:"Fresh Food Enquiry",category:"Food",price:80,image:"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80",desc:"Food items की उपलब्धता, मात्रा और delivery पहले confirm करें।"},
+{id:6,name:"Personal Care Essentials",category:"Personal Care",price:120,image:"https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80",desc:"Personal care items की उपलब्धता WhatsApp पर पूछें।"}
 ];
-
-let products = JSON.parse(localStorage.getItem("tavegtProducts")) || demoProducts;
-let cart = [];
-
-function saveProducts(){
- localStorage.setItem("tavegtProducts",JSON.stringify(products));
-}
-
-function showProducts(list=products){
- const box=document.getElementById("products");
- box.innerHTML="";
- list.forEach(p=>{
-  box.innerHTML+=`
-   <div class="product">
-    <div class="photo">${p.emoji || "📦"}</div>
-    <h3>${p.name}</h3>
-    <small>${p.category}</small>
-    <div class="price">₹${p.price}</div>
-    <button class="btn blue" onclick="addCart(${p.id})">Add to Cart</button>
-   </div>`;
- });
-}
-
-function filterProducts(category){
- showProducts(category==="All"?products:products.filter(p=>p.category===category));
-}
-
-function addCart(id){
- const p=products.find(x=>x.id===id);
- if(!p)return;
- cart.push(p);
- showCart();
-}
-
-function showCart(){
- const box=document.getElementById("cartItems");
- if(!cart.length){
-  box.innerHTML="अभी Cart खाली है।";
- }else{
-  box.innerHTML=cart.map(p=>`${p.name} — ₹${p.price}`).join("<br>");
- }
- document.getElementById("cartTotal").innerText=
- "Total: ₹"+cart.reduce((s,p)=>s+p.price,0);
-}
-
-function orderCart(){
- if(!cart.length){alert("पहले Product चुनें");return;}
- let total=cart.reduce((s,p)=>s+p.price,0);
- let msg="TAVEGT STORE Order:%0A"+
- cart.map(p=>p.name+" - Rs."+p.price).join("%0A")+
- "%0ATotal: Rs."+total+
- "%0APayment: COD / Online (confirm with seller)";
- window.open("https://wa.me/"+WHATSAPP+"?text="+msg,"_blank");
-}
-
-function chooseService(service){
- document.getElementById("bService").value=service;
- document.getElementById("booking").scrollIntoView({behavior:"smooth"});
-}
-
-function sendBooking(){
- let n=document.getElementById("bName").value.trim();
- let p=document.getElementById("bPhone").value.trim();
- let s=document.getElementById("bService").value;
- let a=document.getElementById("bAddress").value.trim();
- let d=document.getElementById("bDetails").value.trim();
-
- if(!n||!p||!s||!a){
-  alert("कृपया नाम, मोबाइल, Service और पता भरें");
-  return;
- }
-
- let msg=`TAVEGT LTD Booking
-Name: ${n}
-Phone: ${p}
-Service: ${s}
-Address: ${a}
-Details: ${d}`;
-
- window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(msg),"_blank");
-}
-
-function adminLogin(){
- if(document.getElementById("adminPass").value==="1234"){
-  document.getElementById("adminArea").classList.remove("hide");
-  alert("Admin Panel खुल गया");
- }else{
-  alert("Password गलत है");
- }
-}
-
-function addProduct(){
- let name=document.getElementById("pName").value.trim();
- let price=Number(document.getElementById("pPrice").value);
- let emoji=document.getElementById("pEmoji").value.trim()||"📦";
- let category=document.getElementById("pCategory").value;
-
- if(!name||price<=0){
-  alert("Product का नाम और सही कीमत डालें");
-  return;
- }
-
- products.push({id:Date.now(),name,price,emoji,category});
- saveProducts();
- showProducts();
- document.getElementById("adminMessage").innerText="Product जोड़ दिया गया!";
- document.getElementById("pName").value="";
- document.getElementById("pPrice").value="";
- document.getElementById("pEmoji").value="";
-}
-
-function resetProducts(){
- if(confirm("Demo Products वापस लाएँ?")){
-  products=[...demoProducts];
-  saveProducts();
-  showProducts();
- }
-}
-
-showProducts();
-showCart();
+let products=loadProducts(),cart=JSON.parse(localStorage.getItem("tavegt_cart")||"[]"),activeCategory="All";
+function loadProducts(){try{let x=JSON.parse(localStorage.getItem("tavegt_products"));return Array.isArray(x)?x:defaultProducts}catch(e){return defaultProducts}}
+function saveProducts(){localStorage.setItem("tavegt_products",JSON.stringify(products))}
+function money(n){return "₹"+Number(n||0).toLocaleString("en-IN")}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function categoryIcon(c){return ({All:"🛍️",Grocery:"🌾",Food:"🍎",Snacks:"🍪",Household:"🏠","Personal Care":"🧴",Other:"📦"})[c]||"📦"}
+function renderCategories(){let cats=["All",...new Set(products.map(p=>p.category))];document.getElementById("categoryBar").innerHTML=cats.map(c=>`<button class="catbtn ${activeCategory===c?"active":""}" onclick="setCategory('${esc(c)}')">${categoryIcon(c)} ${esc(c==="All"?"सभी":c)}</button>`).join("")}
+function setCategory(c){activeCategory=c;renderCategories();filterProducts()}
+function filterProducts(){let q=(document.getElementById("productSearch").value||document.getElementById("searchInput").value||"").toLowerCase();let list=products.filter(p=>(activeCategory==="All"||p.category===activeCategory)&&(`${p.name} ${p.category} ${p.desc}`).toLowerCase().includes(q));let sort=document.getElementById("sortProducts").value;if(sort==="low")list.sort((a,b)=>a.price-b.price);if(sort==="high")list.sort((a,b)=>b.price-a.price);document.getElementById("productGrid").innerHTML=list.length?list.map(p=>`<article class="product"><img src="${esc(p.image||"")}" alt="${esc(p.name)}" loading="lazy" onerror="this.src='https://placehold.co/600x400/eaf1f8/18324f?text=TAVEGT+STORE'"><div class="product-body"><span class="product-cat">${esc(p.category)}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><div class="price">${money(p.price)} <small> / item</small></div><div class="product-actions"><button class="add" onclick="addToCart(${Number(p.id)})">Add to Cart</button><button class="buy" onclick="buyNow(${Number(p.id)})">Buy Now</button></div></div></article>`).join(""):`<div class="empty">इस category में अभी कोई product नहीं है। Admin Panel से product जोड़ें।</div>`}
+function persistCart(){localStorage.setItem("tavegt_cart",JSON.stringify(cart));updateCartCount()}
+function updateCartCount(){let n=cart.reduce((s,x)=>s+x.qty,0);document.getElementById("cartCount").textContent=n;document.getElementById("cartCount2").textContent=n}
+function addToCart(id){let p=products.find(x=>x.id===id);if(!p)return;let row=cart.find(x=>x.id===id);if(row)row.qty++;else cart.push({id:p.id,qty:1});persistCart();alert(p.name+" Cart में जोड़ दिया गया।")}
+function buyNow(id){addToCart(id);openCart()}
+function openCart(){renderCart();document.getElementById("cartOverlay").classList.add("show")}
+function closeCart(){document.getElementById("cartOverlay").classList.remove("show")}
+function changeQty(id,d){let x=cart.find(p=>p.id===id);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(p=>p.id!==id);persistCart();renderCart()}
+function renderCart(){let host=document.getElementById("cartItems");if(!cart.length){host.innerHTML='<div class="empty">आपका Cart खाली है। Store से सामान जोड़ें।</div>';document.getElementById("cartTotal").textContent=money(0);return}let total=0;host.innerHTML=cart.map(x=>{let p=products.find(y=>y.id===x.id);if(!p)return "";total+=p.price*x.qty;return `<div class="cart-row"><div><b>${esc(p.name)}</b><div class="muted">${money(p.price)} × ${x.qty}</div></div><div class="qty"><button onclick="changeQty(${x.id},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${x.id},1)">+</button></div><b>${money(p.price*x.qty)}</b></div>`}).join("");document.getElementById("cartTotal").textContent=money(total)}
+function checkout(e){e.preventDefault();if(!cart.length){alert("पहले Cart में product जोड़ें।");return}let n=document.getElementById("oName").value.trim(),ph=document.getElementById("oPhone").value.trim(),ad=document.getElementById("oAddress").value.trim(),area=document.getElementById("oArea").value,pay=document.getElementById("oPayment").value;if(!/^[0-9]{10}$/.test(ph)){alert("10 अंकों का सही मोबाइल नंबर लिखें।");return}let total=0,lines=cart.map(x=>{let p=products.find(y=>y.id===x.id);if(!p)return "";total+=p.price*x.qty;return `• ${p.name} | Qty: ${x.qty} | ${money(p.price*x.qty)}`}).filter(Boolean).join("\n");let msg=`*TAVEGT LTD - New Store Order*\nName: ${n}\nMobile: ${ph}\nAddress: ${ad}\nDelivery Area: ${area}\nPayment Preference: ${pay}\n\n*Products:*\n${lines}\n\n*Estimated Total: ${money(total)}*\nPlease confirm stock, final price, delivery charge and order acceptance.`;window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank");}
+function sendEnquiry(e){e.preventDefault();let n=document.getElementById("cName").value.trim(),p=document.getElementById("cPhone").value.trim(),s=document.getElementById("cService").value,a=document.getElementById("cAddress").value.trim(),note=document.getElementById("cNote").value.trim();if(!/^[0-9]{10}$/.test(p)){alert("10 अंकों का सही मोबाइल नंबर लिखें।");return}let msg=`*TAVEGT LTD - Service Enquiry*\nName: ${n}\nMobile: ${p}\nService: ${s}\nAddress: ${a}\nDetails: ${note||"Not provided"}`;window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank")}
+function chooseService(s){document.getElementById("cService").value=s}
+function openAdmin(){document.getElementById("adminOverlay").classList.add("show")}
+function closeAdmin(){document.getElementById("adminOverlay").classList.remove("show")}
+function adminLogin(){if(document.getElementById("adminPin").value!=="2468"){alert("PIN सही नहीं है।");return}document.getElementById("adminLogin").classList.add("hidden");document.getElementById("adminPanel").classList.remove("hidden");renderAdmin()}
+function renderAdmin(){document.getElementById("adminProductList").innerHTML=products.map(p=>`<div class="admin-item"><span><b>${esc(p.name)}</b><br>${esc(p.category)} • ${money(p.price)}</span><span><button onclick="editProduct(${p.id})">Edit</button> <button onclick="deleteProduct(${p.id})">Delete</button></span></div>`).join("")||"अभी कोई product नहीं है।"}
+function saveProduct(e){e.preventDefault();let id=Number(document.getElementById("editId").value),obj={id:id||Date.now(),name:document.getElementById("pName").value.trim(),category:document.getElementById("pCategory").value,price:Number(document.getElementById("pPrice").value),image:document.getElementById("pImage").value.trim()||"https://placehold.co/600x400/eaf1f8/18324f?text=TAVEGT+STORE",desc:document.getElementById("pDesc").value.trim()};if(id){products=products.map(p=>p.id===id?obj:p)}else products.unshift(obj);saveProducts();resetProductForm();renderAdmin();renderCategories();filterProducts();alert("Product save हो गया।")}
+function editProduct(id){let p=products.find(x=>x.id===id);if(!p)return;document.getElementById("editId").value=p.id;document.getElementById("pName").value=p.name;document.getElementById("pCategory").value=p.category;document.getElementById("pPrice").value=p.price;document.getElementById("pImage").value=p.image;document.getElementById("pDesc").value=p.desc;document.getElementById("adminFormTitle").textContent="Product Edit करें";document.getElementById("pName").scrollIntoView({behavior:"smooth",block:"center"})}
+function deleteProduct(id){if(!confirm("क्या यह product हटाना है?"))return;products=products.filter(p=>p.id!==id);cart=cart.filter(x=>x.id!==id);saveProducts();persistCart();renderAdmin();renderCategories();filterProducts()}
+function resetProductForm(){document.getElementById("editId").value="";document.getElementById("pName").value="";document.getElementById("pPrice").value="";document.getElementById("pImage").value="";document.getElementById("pDesc").value="";document.getElementById("adminFormTitle").textContent="नया Product जोड़ें"}
+function exportProducts(){let blob=new Blob([JSON.stringify(products,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="tavegt-products-backup.json";a.click();URL.revokeObjectURL(a.href)}
+document.getElementById("year").textContent=new Date().getFullYear();renderCategories();filterProducts();updateCartCount();
+if(location.hash==="#admin"){openAdmin()}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeCart();closeAdmin()}});
 </script>
-
+<!-- Admin panel खोलने के लिए browser address में URL के अंत में #admin लिखें, फिर PIN 2468 डालें। -->
 </body>
 </html>
