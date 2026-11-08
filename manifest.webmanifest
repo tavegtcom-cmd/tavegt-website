@@ -1,0 +1,13 @@
+{
+  "name": "TAVEGT LTD",
+  "short_name": "TAVEGT",
+  "description": "चुनिए, अपनी पसंद — TAVEGT LTD services and store",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#102b4e",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
