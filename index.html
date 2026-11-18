@@ -77,7 +77,14 @@ header{background:#fff;position:sticky;top:0;z-index:30;box-shadow:0 3px 18px #1
 
 <section class="view" id="view-seller"><div class="section"><div class="wrap"><div class="head"><div class="eyebrow">SELLER ZONE</div><h2>TAVEGT पर अपनी दुकान जोड़ें</h2><p>दुकानदार आवेदन भेजें। मंजूरी और Backend जुड़ने के बाद अपनी लिस्टिंग सभी ग्राहकों को दिखा सकेंगे।</p></div><div class="split"><div class="panel"><h2>व्यापारी बनें TAVEGT पार्टनर</h2><p>अपनी दुकान, उत्पाद और कीमत को डिजिटल बाजार में लाने के लिए आवेदन करें। शुरुआती रजिस्ट्रेशन पर कोई शुल्क तय नहीं किया गया है।</p><p>• दुकान की जानकारी<br>• उत्पाद और कीमत<br>• सेवा क्षेत्र<br>• TAVEGT द्वारा समीक्षा</p></div><form class="form" id="sellerForm"><h3>Seller Registration</h3><div class="fields">
 <div class="field"><label>दुकान / व्यवसाय का नाम *</label><input name="business" required></div><div class="field"><label>मालिक का नाम *</label><input name="owner" required></div>
-<div class="field"><label>मोबाइल नंबर *</label><input name="phone" required inputmode="numeric" pattern="[0-9]{10}"></div><div class="field"><label>कैटेगरी *</label><select name="category" required><option value="">चुनें</option><option>किराना</option><option>Home & Kitchen</option><option>Personal Care</option><option>Food</option><option>टेंट / इवेंट</option><option>अन्य</option></select></div>
+<div class="field"><label>मोबाइल नंबर *</label><input name="phone" required inputmode="numeric" pattern="[0-9]{10}"></div><div class="field">
+  <label>ईमेल *</label>
+  <input name="email" type="email" required>
+</div>
+<div class="field">
+  <label>पासवर्ड *</label>
+  <input name="password" type="password" minlength="6" required>
+</div><label>कैटेगरी *</label><select name="category" required><option value="">चुनें</option><option>किराना</option><option>Home & Kitchen</option><option>Personal Care</option><option>Food</option><option>टेंट / इवेंट</option><option>अन्य</option></select></div>
 <div class="field full"><label>दुकान का पता / सेवा क्षेत्र *</label><input name="area" required></div><div class="field full"><label>दुकान / उत्पाद की जानकारी</label><textarea name="details"></textarea></div>
 <div class="field full"><button class="btn dark" type="submit">आवेदन WhatsApp पर भेजें</button></div></div><div class="hint">आवेदन पहले TAVEGT को WhatsApp से भेजा जाएगा। यह अभी वास्तविक seller login नहीं है।</div></form></div>
 <div class="section" style="padding-bottom:0"><div class="head"><div class="eyebrow">SELLER LISTING DEMO</div><h2>प्रोडक्ट जोड़ने का नमूना</h2><p>अभी यह डेमो इसी ब्राउज़र में सेव होगा। सार्वजनिक लिस्टिंग के लिए डेटाबेस और seller authentication जरूरी हैं।</p></div><div class="split"><form class="form" id="listingForm"><h3>नई लिस्टिंग</h3><div class="fields">
@@ -103,7 +110,7 @@ const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
-const WA_NUMBER='917392271502';
+const WA_NUMBER='917322271502';
 const sampleProducts=[
 {id:'p1',seller:'TAVEGT Demo Store',name:'Neem Datun Pack',price:50,category:'Personal Care',description:'नीम दातून का नमूना उत्पाद',emoji:'🌿'},
 {id:'p2',seller:'Local Grocery Demo',name:'Daily Grocery Pack',price:100,category:'किराना',description:'दैनिक जरूरतों का नमूना पैक',emoji:'🛒'},
@@ -121,7 +128,42 @@ function updateCartCount(){const n=getData('tavegt_cart').reduce((s,x)=>s+x.qty,
 function renderCart(){const cart=getData('tavegt_cart');const box=document.getElementById('cartItems');if(!cart.length){box.innerHTML='<div class="empty">आपका कार्ट खाली है। Marketplace से उत्पाद जोड़ें।</div>';document.getElementById('cartTotal').textContent='';return}box.innerHTML='<div class="tablewrap"><table><thead><tr><th>उत्पाद</th><th>कीमत</th><th>मात्रा</th><th>कुल</th><th></th></tr></thead><tbody>'+cart.map(x=>`<tr><td>${safe(x.name)}</td><td>₹${x.price}</td><td><button class="btn small light" onclick="changeQty('${safe(x.id)}',-1)">−</button> ${x.qty} <button class="btn small light" onclick="changeQty('${safe(x.id)}',1)">+</button></td><td>₹${x.price*x.qty}</td><td><button class="btn small light" onclick="removeCart('${safe(x.id)}')">हटाएँ</button></td></tr>`).join('')+'</tbody></table></div>';document.getElementById('cartTotal').textContent='कुल अनुमानित राशि: ₹'+cart.reduce((s,x)=>s+x.price*x.qty,0).toLocaleString('en-IN')}
 function changeQty(id,n){let c=getData('tavegt_cart');let x=c.find(v=>v.id===id);if(x)x.qty+=n;c=c.filter(v=>v.qty>0);putData('tavegt_cart',c);renderCart();updateCartCount()}
 function removeCart(id){putData('tavegt_cart',getData('tavegt_cart').filter(x=>x.id!==id));renderCart();updateCartCount()}
-document.getElementById('sellerForm').addEventListener('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));const a=getData('tavegt_sellers');a.unshift({...d,created:new Date().toLocaleString('en-IN'),status:'Pending'});putData('tavegt_sellers',a);wa('TAVEGT LTD - Seller Registration\n'+Object.entries(d).map(([k,v])=>k+': '+v).join('\n'));alert('आवेदन इस डिवाइस में सेव हुआ है। WhatsApp संदेश भी तैयार किया गया है।');e.target.reset()});
+document.getElementById('sellerForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const d = Object.fromEntries(new FormData(e.target));
+
+  try {
+    const { data, error } = await supabaseClient.auth.signUp({
+      email: d.email,
+      password: d.password
+    });
+
+    if (error) throw error;
+
+    if (!data.user || !data.session) {
+      alert('ईमेल पर आया verification link खोलें। उसके बाद दोबारा Login करना होगा।');
+      return;
+    }
+
+    const { error: saveError } = await supabaseClient
+      .from('sellers')
+      .insert({
+        id: data.user.id,
+        business_name: d.business,
+        owner_name: d.owner,
+        phone: d.phone
+      });
+
+    if (saveError) throw saveError;
+
+    alert('TAVEGT Seller Registration सफल हुआ!');
+    e.target.reset();
+
+  } catch (error) {
+    alert('Error: ' + error.message);
+  }
+});('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));const a=getData('tavegt_sellers');a.unshift({...d,created:new Date().toLocaleString('en-IN'),status:'Pending'});putData('tavegt_sellers',a);wa('TAVEGT LTD - Seller Registration\n'+Object.entries(d).map(([k,v])=>k+': '+v).join('\n'));alert('आवेदन इस डिवाइस में सेव हुआ है। WhatsApp संदेश भी तैयार किया गया है।');e.target.reset()});
 document.getElementById('listingForm').addEventListener('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));const a=getData('tavegt_listings');a.unshift({...d,id:'l'+Date.now(),price:Number(d.price),approved:false,emoji:'🛍️'});putData('tavegt_listings',a);alert('डेमो लिस्टिंग सेव हुई। Owner approval के बाद ही Marketplace पर दिखेगी।');e.target.reset();renderOwner()});
 function renderOwner(){const list=getData('tavegt_listings'),sellers=getData('tavegt_sellers');document.getElementById('ownerListings').textContent=list.length;document.getElementById('ownerSellers').textContent=sellers.length;document.getElementById('ownerCart').textContent=getData('tavegt_cart').reduce((s,x)=>s+x.qty,0);const rows=document.getElementById('ownerRows');rows.innerHTML=list.length?list.map(x=>`<tr><td>${safe(x.seller)}</td><td>${safe(x.name)}</td><td>₹${x.price}</td><td>${safe(x.category)}</td><td><span class="badge">${x.approved?'Approved':'Pending'}</span> <button class="btn small" onclick="approveListing('${safe(x.id)}')">Approve demo</button></td></tr>`).join(''):'<tr><td colspan="5">अभी कोई डेमो लिस्टिंग नहीं।</td></tr>'}
 function approveListing(id){const a=getData('tavegt_listings');const x=a.find(v=>v.id===id);if(x)x.approved=true;putData('tavegt_listings',a);renderOwner();renderProducts();alert('इस ब्राउज़र के डेमो में लिस्टिंग Approved हुई। यह वास्तविक सर्वर approval नहीं है।')}
