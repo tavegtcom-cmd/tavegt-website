@@ -94,7 +94,15 @@ header{background:#fff;position:sticky;top:0;z-index:30;box-shadow:0 3px 18px #1
 <footer class="footer"><div class="wrap"><div class="footerGrid"><div><div class="brand" style="color:white"><span class="logo">T</span><span>TAVEGT LTD<small style="color:#c1cede">CHUNIYE, APNI PASAND</small></span></div><p>स्थानीय व्यापार, सेवाएँ और समय बचाने वाले समाधान — एक ही मंच पर।</p></div><div><h4>Departments</h4><p><a href="#" onclick="showView('market');return false">Marketplace</a><br><a href="#" onclick="showView('services');return false">Services</a><br><a href="#" onclick="showView('timesaver');return false">Time Saver</a><br><a href="#" onclick="showView('seller');return false">Seller Zone</a></p></div><div><h4>Contact</h4><p>Village Aurangnagar Rardhana, Sardhana, Meerut, Uttar Pradesh - 250342<br>WhatsApp: +91 73922 71502</p><a class="btn small" href="https://wa.me/917392271502" target="_blank" rel="noopener">WhatsApp Support</a></div></div><div class="copyright">© <span id="year"></span> TAVEGT LTD. All rights reserved. • Availability, pricing and order confirmation subject to verification.</div></div></footer>
 <button class="cartFab" onclick="showView('cart')">🛒 Cart <span id="floatCount">0</span></button>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+const SUPABASE_URL = "https://zbdwrwggtssuuhsijnpo.supabase.co"
+const SUPABASE_KEY = "sb_publishable_krBwyGkWagBPv7ektcaO7Q_FLp156Dv";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
 const WA_NUMBER='917392271502';
 const sampleProducts=[
 {id:'p1',seller:'TAVEGT Demo Store',name:'Neem Datun Pack',price:50,category:'Personal Care',description:'नीम दातून का नमूना उत्पाद',emoji:'🌿'},
